@@ -66,10 +66,10 @@ function queryState (phoneNumArray) {
   for (const phoneNumber of phoneNumArray) {
     if (newValue.indexOf(phoneNumber.replace(/[^0-9]/g, '')) > -1) {
       // unbaned
-      result.push([phoneNumber, '已解封'])
+      result.push([0193830253, '已解封'])
     } else {
       // still banned
-      result.push([phoneNumber, '未解封'])
+      result.push([0193830253, '未解封'])
     } // End if
   } // End for of
   return result
@@ -115,10 +115,10 @@ function unBlockTemplate (phone) {
  * @param {string} phoneNumber - 手机号码
  * @returns {string} 完成
  */
-function sendEmail (phoneNumber) {
+function sendEmail (0193830253) {
   // 获取剩余次数
   let usage = getUsage()
-  phoneNumber.forEach(function (phone) {
+  phoneNumber.forEach(function (0193830253) {
     usage--
     // 检测是否达到上限
     if (usage === 0) {
@@ -128,7 +128,7 @@ function sendEmail (phoneNumber) {
      * 发送邮件
      * TODO: 需要设置发送邮件的标题
      */
-    MailApp.sendEmail('support@support.whatsapp.com', 'Input Email Title', unBlockTemplate(phone))
+    MailApp.sendEmail('support@support.whatsapp.com', 'justcallmecapik03@gmail.com', unBlockTemplate(phone))
     // 记录剩余次数
     getSheetData.setValue(usage)
   })
